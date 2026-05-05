@@ -33,4 +33,18 @@ public class Board {
 
     }
 
+    //Belirlenen sütun ve satıra hamle yapmayı sağlayan metod
+    public boolean placeMark(int row ,int col , char mark ){
+        //1. kural girilen değerler 0,1 veya 2 olmalı (çünkü diziler sıfırdan başlar )
+        if(row>=0 && row < 3 && col >=0 && col<3){
+
+            //2. kural: seçilen kare boş mu? ('-' işareti mi var?)
+            if(grid[row][col] == '-'){
+                grid[row][col] = mark ;//Boşsa harfi koy
+                return true ; //Hamle başarılı anlamında true döndür
+            }
+        }
+        return false; //Kare doluysa veya sınırlar dışındaysa hamle başarısız
+
+    }
 }
