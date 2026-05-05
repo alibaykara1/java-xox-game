@@ -53,7 +53,7 @@ public class Board {
         //Satır ve sütun kontrolleri (Döngü ile 3 satırı ve 3 sütunu kontrol ediyoruz )
         for (int i = 0; i < 3; i++) {
             if ((grid[i][0] == mark && grid[i][1] == mark && grid[i][2] == mark) || //Yatay satır kontrolü
-                (grid[0][i] == mark && grid[1][i] == mark && grid[1][i] == mark )){ //Dikey sütun kontrolü
+                (grid[0][i] == mark && grid[1][i] == mark && grid[2][i] == mark )){ //Dikey sütun kontrolü
                 return true; //Kazanan bulundu !
             }
         }
